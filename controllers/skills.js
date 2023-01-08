@@ -1,4 +1,4 @@
-import { Skill } from '../models/skills.js'
+import { Skill } from '../models/skill.js'
 
 
 function index(req, res) {
@@ -20,7 +20,7 @@ function create(req,res){
   console.log(req.body)
   req.body.current = false
   Skill.create(req.body)
-  .then(skill =>{
+  .then(() =>{
     res.redirect('/skills')
   })
   .catch(error => { 
@@ -31,13 +31,13 @@ function create(req,res){
 function show(req, res) {
   Skill.findById(req.params.id)
   .then(skill => {
-    res.render('todos/show', {
+    res.render('skills/show', {
       skill: skill
     })
   })
   .catch(error => {
     console.log(error)
-    res.redirect('/todos')
+    res.redirect('/skills')
   })
 }
 
