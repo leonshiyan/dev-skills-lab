@@ -11,9 +11,8 @@
   <ul>
     <% skills.forEach(skill => { %>
       <li>
-				<%= skill.name %> 
-        -
-        <%= skill.level %> 
+				<a href="/skills/<%= skill._id %>"><%= skill.name %></a>
+        <%= skill.current ? 'Used recently' : 'Not used for a while' %> 
 			</li>
     <% }) %>
   </ul>
