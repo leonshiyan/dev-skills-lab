@@ -7,17 +7,23 @@ const router = Router()
 router.get('/', skillsCtrl.index)
 
 
-// GET /todos/new
+// GET /skills/new
 router.get('/new', skillsCtrl.new)
 
-// GET /todos/:id
+// GET /skills/:id
 router.get('/:id', skillsCtrl.show)
 
-// POST /todos
+// POST /skills
 router.post('/', skillsCtrl.create)
 
 // DELETE 
 router.delete('/:id',skillsCtrl.delete)
+
+// GET /skills/:id/edit
+router.get('/:id/edit', skillsCtrl.edit)
+
+// PUT /skills/:id
+router.put('/:id', skillsCtrl.update)
 
 export {
   router

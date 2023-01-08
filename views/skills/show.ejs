@@ -11,7 +11,8 @@
   <h1>Skills</h1>
   <h2>Skill #<%= skill._id %></h2>
   <h3><%= skill.name %></h3>
-  <p>Complete: <%= skill.current ? 'Yes' : 'No' %></p>
+  <a href="/skills/<%= skill._id %>/edit">Edit Skill</a>
+  <p>Current using: <%= skill.current ? 'Yes' : 'No' %></p>
 	<a href="/skills">Go back</a>
 </body>
 </html>
