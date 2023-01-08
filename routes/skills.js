@@ -6,11 +6,9 @@ const router = Router()
 
 router.get('/', skillsCtrl.index)
 
-// GET /todos
-// router.get('/', skillsCtrl.index)
 
-// // GET /todos/new
-// router.get('/new', skillsCtrl.new)
+// GET /todos/new
+router.get('/new', skillsCtrl.new)
 
 // // GET /todos/:id
 // router.get('/:id', skillsCtrl.show)
